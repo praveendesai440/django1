@@ -1,0 +1,65 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{% static 'home/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/head.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/course.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/font-awesome-4.7.0/css/font-awesome.css' %}">
+
+    <!-- icon -->
+    <link rel="icon" href="{% static 'image/logo1.jpg' %}">
+    <title>K.L.E Technological University</title>
+</head>
+
+
+<body>
+    <header>
+        <!-- login and signup -->
+        <div id="first">
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Signup</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+            <!-- contact number -->
+            <p class="hide"> <i class="fa fa-phone"></i> +91 836-2378142, 8652417545</p>
+        </div>
+        <!-- navigation bar -->
+        <div class="navbar">
+            <div class="align">
+                <a href="{% url 'home-page' %}">HOME</a>
+                <a href="{% url 'course-page' %}">COURSE</a>
+                <a href="#">ADMISSION</a>
+                <a href="{% url 'about-page' %}">ABOUT US</a>
+                <div class="dropdown">
+                  <button class="dropbtn">MORE
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#">Campus Visit</a>
+                    <a href="#">Events</a>
+                    <a href="#">Gallery</a>
+                  </div>
+                </div>
+            </div>
+            <!-- burger section -->
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+        <!-- logo with link -->
+        <a href="#"> <img src="{% static 'image/logo.png' %}" alt="KLE Technology" height="50px" width="200px"></a>
+    </header>
+    <div >
+        {% block content %}{% endblock %}
+    </div>
+       
+</body>
+</html>

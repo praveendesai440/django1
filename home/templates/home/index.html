@@ -1,0 +1,94 @@
+{% extends "home/base.html" %}
+{% load static %}
+{% block content %}
+    <!-- college picture -->
+    <div id="para" class="parallax"><img src="{% static 'image/KLETECH.png' %}" width="1550px" height="500px" alt="Campuss"></div>
+       
+
+    <!-- clickable flex boxes -->
+    <div class="main-flex">
+        <a href="{% url 'course-page' %}">
+            <h4>COURSE</h4>
+            <p>We offer graduation and post graduation programmes in Science and Management to all the aspiring students. <br> <strong style="color:goldenrod; line-height: 30px;">View More</strong>
+            </p>
+            <div class="icon">
+                <i class="fa fa-book"></i>
+            </div>
+        </a>
+        <a href="#">
+            <h4>ADMISSION</h4>
+            <p>Admission are open for the 2021 Science and Management batch, apply early to avoid last hour rush.  <br> <strong style="color:goldenrod; line-height: 30px;"> Apply Now </strong>
+            </p>
+            <div class="icon">
+                <i class="fa fa-wpforms"></i>
+            </div>
+        </a>
+        <a href="#"><div>
+            <h4>EVENTS</h4>
+            <p>Technical seminar on database, Cultural fest for the 2nd year students. <br><strong style="color:goldenrod;line-height: 30px;">Click here for more Events</strong>
+            </p>
+            <div class="icon">
+                <i class="fa fa-bell"></i>
+            </div>
+        </div></a>
+    </div>
+
+    <!-- about courses -->
+    <section class="details-section">
+        <div class="parallax-img">
+            <div id="parallax-pic"><img src="{% static 'image/parallax1.jpg' %}"  width="800px" height="375px" alt="Campuss"></div>
+
+            <div class="parallax-content">
+                <h2>Cirriculum</h2>
+                <p>SoCSE believes in educating students through learning by doing. The curriculum involves well designed laboratory courses involving structured and open ended experiments. Theoretical learning in the courses is enhanced by course project and integrated projects.</p>
+            </div>
+        </div>
+
+    <div class="parallax-img">
+        <div class="parallax-content">
+            <h2>Cirriculum</h2>
+            <p>Faculty at SoCSE use various teaching-learning methodologies for course development and delivery.</p>
+        </div>
+        <div ><img src="{% static 'image/brown-book-page.jpg' %}"  width="800px" height="375px" alt="Campuss"></div>
+    </div>
+    </section>
+    <!-- social media icons -->
+    <div class="index-social-icon">
+
+    </div>
+    <!-- footer -->
+    <footer>
+        <!-- college pic collage -->
+            <div class="footerimg">
+                <h2>Gallery</h2>
+                <a style="text-decoration:none;" href="#">
+                  <img src="{% static 'image/1.jpg' %}" width="100px" height="100px" alt="Campus picture">
+                  <img src="{% static 'image/2.png' %}" width="100px" height="100px" alt="Badminton court">
+                  <img src="{% static 'image/4.jpg' %}" width="100px" height="100px" alt="Library">
+                  <img src="{% static 'image/fest.jpg' %}" width="100px" height="100px" alt="college fest">
+                  <img src="{% static 'image/festival.png' %}" width="100px" height="100px" alt="festival picture">
+                  <img src="{% static 'image/event.jpg' %}" width="100px" height="100px" alt="college event">
+                </a>
+            </div>
+            <div class="foot_second">
+                <!-- college info -->
+                    <h2>About Us</h2>
+                    <p>
+                      KLE Tech Computer Science & Engineering program provides a unique environment for learning through
+                      a curriculum designed for experiential learning. This experience is ensured by creating a curriculum
+                      designed by inputs from industry, academia and recent technological advancements.
+                    </p>
+                    <!-- footer links -->
+                    <a href="{% url 'home-page' %}">HOME</a>
+                    <a href="{% url 'course-page' %}">COURSE</a>
+                    <a href="event.html">EVENTS</a>
+                    <a href="admission.html">ADMISSION</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+
+        </footer>
+        <!-- javascript link -->
+        <script src="app.js"></script>
+
+
+{% endblock content %}
